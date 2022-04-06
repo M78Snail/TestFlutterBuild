@@ -1,0 +1,37 @@
+buildscript {
+    repositories {
+        maven{
+            url "http://af.hikvision.com.cn/artifactory/maven-down/"
+        }
+        maven {url 'https://developer.huawei.com/repo/'}
+        google()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.0.0'
+    }
+
+}
+
+allprojects {
+    repositories {
+        maven{
+            url "http://af.hikvision.com.cn/artifactory/maven-down/"
+        }
+
+        google()
+
+//        maven {
+//            url "$rootDir/./flutter/repo"
+//        }
+
+        maven {
+            url 'http://af.hikvision.com.cn/'
+        }
+        maven {url 'https://developer.huawei.com/repo/'}
+
+        maven {
+            url "$rootDir/./flutter/repo"
+        }
+    }
+}
